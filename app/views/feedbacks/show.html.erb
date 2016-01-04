@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Meeting with:</strong>
+  <%= @feedback.meeting_with %>
+</p>
+
+<p>
+  <strong>Meeting happened:</strong>
+  <%= @feedback.meeting_happened %>
+</p>
+
+<p>
+  <strong>Was useful:</strong>
+  <%= @feedback.was_useful %>
+</p>
+
+<p>
+  <strong>Potential revenue:</strong>
+  <%= @feedback.potential_revenue %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @feedback.comments %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
