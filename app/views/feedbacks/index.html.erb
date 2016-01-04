@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Feedbacks</h1>
-
+<div class="page-header"><h1>Listing Feedbacks</h1></div>
+<div class="text-right">
+  <%= link_to 'New Feedback', new_feedback_path, class: 'btn btn-primary' %>
+</div>
 <table class="table">
   <thead>
     <tr>
@@ -19,13 +21,14 @@
     <% @feedbacks.each do |feedback| %>
       <tr>
         <td><%= feedback.id %></td>
-        <td><%= feedback.meeting_happened %></td>
-        <td><%= feedback.was_useful %></td>
+        <td><%= feedback.meeting_with.titleize %></td>
+        <td><%= feedback.meeting_happened ? 'Yes' : 'No' %></td>
+        <td><%= feedback.was_useful ? 'Yes' : 'No' %></td>
         <td><%= feedback.potential_revenue %></td>
         <td><%= feedback.comments %></td>
-        <td><%= link_to 'Show', feedback %></td>
-        <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
-        <td><%= link_to 'Destroy', feedback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', feedback, class: 'btn btn-xs btn-success' %></td>
+        <td><%= link_to 'Edit', edit_feedback_path(feedback), class: 'btn btn-xs btn-primary' %></td>
+        <td><%= link_to 'Destroy', feedback, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Feedback', new_feedback_path %>
+
