@@ -12,21 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :meeting_with %><br>
-    <%= f.text_area :meeting_with %>
+    <%= f.label 'Did the meeting happen?' %><span class="font-red">*</span><br>
+    <%= f.label :meeting_happened, "Yes", :value => "true" %>
+    <%= f.radio_button :meeting_happened, true %>
+    <%= f.label :meeting_happened, "No", :value => "false" %>
+    <%= f.radio_button :meeting_happened, false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :meeting_with_company %><span class="font-red">*</span><br>
+    <%= f.text_field :meeting_with %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :was_it_useful? %><span class="font-red">*</span><br>
+    <%= f.label :was_useful, "Yes", :value => "true"  %>
+    <%= f.radio_button :was_useful, true %>
+    <%= f.label :was_useful, "No", :value => "false"  %>
+    <%= f.radio_button :was_useful, false %>
   </div>
   <div class="field">
-    <%= f.label :meeting_happened %><br>
-    <%= f.radio_button :meeting_happened, '1' %> Yes
-    <%= f.radio_button :meeting_happened, '0' %> No
-  </div>
-  <div class="field">
-    <%= f.label :was_useful %><br>
-    <%= f.radio_button :was_useful, '1' %> Yes
-    <%= f.radio_button :was_useful, '0' %> No 
-  </div>
-  <div class="field">
-    <%= f.label :potential_revenue %><br>
+    <%= f.label :potential_revenue_expected %><span class="font-red">*</span><br>
     <%= f.text_field :potential_revenue %>
   </div>
   <div class="field">
