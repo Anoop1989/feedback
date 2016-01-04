@@ -10,12 +10,11 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label 'Did the meeting happen?' %><span class="font-red">*</span><br>
-    <%= f.label :meeting_happened, "Yes", :value => "true" %>
+    <%= f.label :meeting_happened, "Yes", :value => '1' %>
     <%= f.radio_button :meeting_happened, true %>
-    <%= f.label :meeting_happened, "No", :value => "false" %>
+    <%= f.label :meeting_happened, "No", :value => '0' %>
     <%= f.radio_button :meeting_happened, false %>
   </div>
 
