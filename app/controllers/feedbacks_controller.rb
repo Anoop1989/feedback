@@ -32,6 +32,7 @@ class FeedbacksController < ApplicationController
 
   # PATCH/PUT /feedbacks/1
   def update
+    puts feedback_params
     if @feedback.update(feedback_params)
       redirect_to @feedback, notice: 'Feedback was successfully updated.'
     else

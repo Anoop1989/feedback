@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Meeting with</th>
       <th>Meeting happened</th>
       <th>Was useful</th>
@@ -17,7 +18,7 @@
   <tbody>
     <% @feedbacks.each do |feedback| %>
       <tr>
-        <td><%= feedback.meeting_with %></td>
+        <td><%= feedback.id %></td>
         <td><%= feedback.meeting_happened %></td>
         <td><%= feedback.was_useful %></td>
         <td><%= feedback.potential_revenue %></td>

@@ -17,11 +17,13 @@
   </div>
   <div class="field">
     <%= f.label :meeting_happened %><br>
-    <%= f.check_box :meeting_happened %>
+    <%= f.radio_button :meeting_happened, '1' %> Yes
+    <%= f.radio_button :meeting_happened, '0' %> No
   </div>
   <div class="field">
     <%= f.label :was_useful %><br>
-    <%= f.check_box :was_useful %>
+    <%= f.radio_button :was_useful, '1' %> Yes
+    <%= f.radio_button :was_useful, '0' %> No 
   </div>
   <div class="field">
     <%= f.label :potential_revenue %><br>
