@@ -34,12 +34,12 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', '~> 0.8.3', :require => false
-end
+# group :test do
+#   # Pretty printed test output
+#   gem 'turn', '~> 0.8.3', :require => false
+# end
 
-group :development do
+group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda-matchers', '~> 2.7.0', require: false
   gem 'database_cleaner', '~> 1.3.0'
