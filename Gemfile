@@ -47,3 +47,6 @@ group :development, :test do
   gem 'simplecov-rcov', '~> 0.2.3'
   gem 'factory_girl_rails', '~> 4.5.0', :require => false
 end
+
+gem 'rails_12factor', group: :production
+ruby "2.2.0"
