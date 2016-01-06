@@ -4,6 +4,13 @@ class FeedbacksController < ApplicationController
   # GET /feedbacks
   def index
     @feedbacks = Feedback.all
+
+    respond_to do |format|
+      format.json {
+        render json: {"feedbacks" => @feedbacks.map(&:get_attributes)}.to_json
+      }
+      format.html
+    end
   end
 
   # GET /feedbacks/1
